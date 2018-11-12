@@ -11,15 +11,15 @@ add this line to your module build.gradle (app) dependecies block:
      implementation 'com.github.mohamadmt:endless_scrolling_recyclerview:1.0.2'
 
 
-## How use this lib
+## How use this lib (with Retrofit)
 
-  private RecyclerView recyclerView;
-  private ProgressBar  progressbar;
-  private ScrollObject object;
-  
-  @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+       private RecyclerView recyclerView;
+       private ProgressBar  progressbar;
+       private ScrollObject object;
+
+       @Override
+         protected void onCreate(Bundle savedInstanceState) {
+             super.onCreate(savedInstanceState);
         
         setup();
     }
