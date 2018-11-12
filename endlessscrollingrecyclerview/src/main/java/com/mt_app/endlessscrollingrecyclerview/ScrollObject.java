@@ -14,7 +14,7 @@ public class ScrollObject {
     private boolean  loading;
 
 
-    public ScrollObject(Context context, int currentPage, int visibleThreshold, View progressBar, RecyclerView recyclerView) {
+    private ScrollObject(Context context, int currentPage, int visibleThreshold, View progressBar, RecyclerView recyclerView) {
         this.context = context;
         this.currentPage = currentPage;
         this.visibleThreshold = visibleThreshold;
@@ -25,11 +25,11 @@ public class ScrollObject {
         setLoading(true);
     }
 
-    public void setCurrentPage(int currentPage) {
+    private void setCurrentPage(int currentPage) {
         this.currentPage = currentPage;
     }
 
-    public void setLoading(boolean loading) {
+    private void setLoading(boolean loading) {
         this.loading = loading;
     }
 
