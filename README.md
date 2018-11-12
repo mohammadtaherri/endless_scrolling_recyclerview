@@ -1,14 +1,40 @@
 # Endless_Scroll_recyclerview
 
 ## How to download
-### Gradle: 
-add this line to your module build.gradle (project) allproject block:
 
-     maven { url 'https://jitpack.io' }
+### Maven
+Step 1. Add the JitPack repository to your build file
+
+     <repositories>
+          <repository>
+              <id>jitpack.io</id>
+              <url>https://jitpack.io</url>
+          </repository>
+     </repositories>
      
-add this line to your module build.gradle (app) dependecies block:
+Step 2. Add the dependency
 
-     implementation 'com.github.mohamadmt:endless_scrolling_recyclerview:1.0.2'
+     <dependency>
+	    <groupId>com.github.mohamadmt</groupId>
+	    <artifactId>endless_scrolling_recyclerview</artifactId>
+	    <version>1.0.2</version>
+	</dependency>
+
+### Gradle: 
+Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+     
+Step 2. Add the dependency
+
+     dependencies {
+	        implementation 'com.github.mohamadmt:endless_scrolling_recyclerview:1.0.2'
+	}
 
 
 ## How use this lib (with Retrofit)
