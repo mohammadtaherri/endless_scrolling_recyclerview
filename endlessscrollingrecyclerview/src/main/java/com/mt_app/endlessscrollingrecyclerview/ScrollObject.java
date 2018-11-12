@@ -65,13 +65,13 @@ public class ScrollObject {
         showProgressbar();
     }
 
-    public void LoadSuccess(){
-        setLoading(true);
+    public void loadSuccess(boolean isLastPage){
+        setLoading(!isLastPage);
         runScrolling();
         hideProgressbar();
     }
 
-    public void LoadFailed(){
+    public void loadFailed(){
         setLoading(true);
         runScrolling();
         hideProgressbar();
