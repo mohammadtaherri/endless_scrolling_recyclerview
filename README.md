@@ -13,6 +13,7 @@ add this line to your module build.gradle (app) dependecies block:
 
 ## How use this lib (with Retrofit)
 
+### step1
        private RecyclerView recyclerView;
        private ProgressBar  progressbar;
        private ScrollObject object;
@@ -24,6 +25,7 @@ add this line to your module build.gradle (app) dependecies block:
         setup();
     }
     
+### step2    
     private void setup{
 
         recyclerView = findViewById(R.id.recycler_view);
@@ -33,7 +35,7 @@ add this line to your module build.gradle (app) dependecies block:
                 .setContext(this)
                 .setCurrentPage(2)
                 .setVisibleThreshold(6)
-                .setProgressbar(pbMain)
+                .setProgressbar(progressbar)
                 .setRecyclerView(recyclerView)
                 .build();
 
@@ -47,7 +49,8 @@ add this line to your module build.gradle (app) dependecies block:
         ....
         recyclerView.setAdapter(...);
     }
-    
+
+### step3
      private void getData(int page) {
      
         new ApiServic().getApi().getMovies(page).enqueue(new Callback<...>() {
