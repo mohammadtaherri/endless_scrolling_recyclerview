@@ -53,7 +53,7 @@ add this line to your module build.gradle (app) dependecies block:
 ### step3
      private void getData(int page) {
      
-        new ApiServic().getApi().getMovies(page).enqueue(new Callback<...>() {
+       getRetrofitApi().getData(page).enqueue(new Callback<...>() {
             @Override
             public void onResponse(Call<...> call, Response<...> response) {
                 if (response.isSuccessful()){
@@ -73,7 +73,7 @@ add this line to your module build.gradle (app) dependecies block:
             }
         });
     }
-```
+
 
 ## License
 Copyright 2018 Mohammad Taheri
